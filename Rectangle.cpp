@@ -62,6 +62,11 @@ Point2D Rectangle::get_vertex(int ind) const
     return vs[ind];
 }
 
+Point2D Rectangle::operator[](int ind) const
+{
+    return get_vertex(ind);
+}
+
 void Rectangle::set_vertices(Point2D* vertices)
 {
     if (!check(vertices))
